@@ -1,0 +1,9 @@
+# Local / editor noise
+.DS_Store
+*.log
+
+# Dependency installs if someone runs npm at repo root
+node_modules/
+
+# Agent scratch (not part of the playbook)
+agent-tools/

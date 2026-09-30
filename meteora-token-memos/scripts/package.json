@@ -1,0 +1,13 @@
+{
+  "name": "meteora-blog-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Helpers for the Meteora Token Memos Grok Bot playbook (zero npm deps; Node 20+ fetch)",
+  "scripts": {
+    "scan": "node scan_meteora_positions.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

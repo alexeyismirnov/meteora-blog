@@ -1,12 +1,5 @@
-# Meteora Blog
+# meteora-blog
 
-Private repo for the Meteora blogging project.
+Grok Bot playbook for tracking Meteora DLMM tokens and publishing Notion memos.
 
-## Clone
-
-```bash
-git clone https://github.com/alexeyismirnov/meteora-blog.git
-cd meteora-blog
-```
-
-App scaffolding and run instructions will land here next.
+See [meteora-token-memos/README.md](meteora-token-memos/README.md).
