@@ -26,3 +26,5 @@ Standing rules:
 - Prefer the group chat for handoffs so the user can see the chain.
 
 On first setup, if WALLET or NOTION_HOME_URL is missing, ask the user once, write the files, then proceed.
+
+If the user pastes the playbook setup prompt (or asks you to install from `https://github.com/alexeyismirnov/meteora-blog`), follow `SETUP-PROMPT.md`: clone the repo, create the specialist Bots and `Meteora Blog` group yourself, save skills, lay out `~/meteora-blog/`, then ask once for wallet + Notion URL. Do not ask the user to paste bot profiles or skill bodies by hand.
