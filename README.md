@@ -1,12 +1,12 @@
-# New Project
+# Meteora Blog
 
-Empty starter repository linked from Cursor Cloud Agent.
+Private repo for the Meteora blogging project.
 
-## Setup
+## Clone
 
 ```bash
-git clone https://github.com/alexeyismirnov/new-project.git
-cd new-project
+git clone https://github.com/alexeyismirnov/meteora-blog.git
+cd meteora-blog
 ```
 
-Add your app code here, then commit and push as usual.
+App scaffolding and run instructions will land here next.
