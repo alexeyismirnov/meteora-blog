@@ -98,19 +98,23 @@ The scanner is plain Node 20+ (`fetch` built-in). No `npm install` required.
 
 ### 6. Notion blog (guide me; automate what you can)
 
-If Notion is already connected in the browser / plugin, help create (or verify) a page **Meteora Token Blog** with a database that has:
+Public layout must be a **blog**, not a database table UI:
 
-| Property | Type |
-|----------|------|
-| Title | Title |
-| Symbol | Text |
-| Mint | Text |
-| Pool | Text |
-| First seen | Date |
-| Sources | Text or URL |
-| Status | Select — `published`, `thin-info` |
+```text
+Home (Meteora Token Blog)  ← this is NOTION_HOME_URL / Site home
+  ├── short intro
+  ├── Posts — linked list of full post pages (newest first)
+  └── optional Memos DB (bookkeeping only; not the main Site entry)
+```
 
-Then ensure **Share → Publish** is on so new rows go live. Copy the public site or parent page URL.
+If Notion is already connected in the browser / plugin, help create (or verify):
+
+1. A page **Meteora Token Blog** as the Site **home / index**.
+2. A **Posts** heading on that page (NotionPublisher will add page links under it).
+3. Optional database (Title, Symbol, Mint, Pool, First seen, Sources, Status `published` / `thin-info`) — do **not** make the DB the public homepage.
+4. **Share → Publish** on the home page so child post pages go live.
+
+Copy the **home page / Site URL** (index), not a nested database URL.
 
 If you cannot complete Notion without me, tell me exactly what to click, then wait for the URL.
 

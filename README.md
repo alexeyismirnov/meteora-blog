@@ -70,21 +70,29 @@ Optional env:
 - `METEORA_DLMM_API` — default `https://dlmm.datapi.meteora.ag`
 - `DAYS_BACK` — closed-position lookback in days (default `365`)
 
-## Notion database shape
+## Notion site layout (blog, not DB table)
 
-If the Bot cannot finish Notion alone, create a page **Meteora Token Blog** with a database:
+Public Site should read like a blog:
 
-| Property | Type |
-|----------|------|
-| Title | Title (token name or symbol) |
-| Symbol | Text |
-| Mint | Text |
-| Pool | Text |
-| First seen | Date |
-| Sources | Text or URL |
-| Status | Select — `published`, `thin-info` |
+```text
+Home (published Notion Site)
+  ├── short intro
+  ├── Posts — linked list, newest first → each link opens a full post page
+  └── (optional) hidden/low Memos database for your own filtering
+```
 
-Then **Share → Publish**. Subpages and rows go live when created.
+Do **not** use “open database → click row → side peek” as the main reading path.
+
+If the Bot cannot finish Notion alone:
+
+1. Create a page **Meteora Token Blog** (this is the Site home / index).
+2. Add a **Posts** heading; leave room for links NotionPublisher will add.
+3. Optional: a Memos database with Title, Symbol, Mint, Pool, First seen, Sources, Status (`published` / `thin-info`) — for bookkeeping only.
+4. **Share → Publish** the home page.
+
+**Already live with a DB-only layout?** Pull this repo, ask NotionPublisher to reload `publish-notion-memo` and its profile from `bots/notion-publisher.md`, then say:
+
+> Migrate the Notion Site to a blog index: on the home page, add a Posts list linking to each existing memo as a full page (newest first). Keep the database off the main reading path.
 
 **Plan B:** publish Markdown to a public GitHub repo instead. Keep the same registry and memo shape; only NotionPublisher’s steps change.
 
@@ -100,8 +108,8 @@ Expected flow:
 
 1. WalletScout runs the scanner and diffs against `researched-tokens.json`.
 2. For each **new** non-SOL mint, TokenResearch writes a 3–4 sentence memo.
-3. NotionPublisher creates the Notion page + database row **immediately** (no draft approval) and updates the registry.
-4. MeteoraDesk replies with token, one-line thesis, and Notion URL for each new post.
+3. NotionPublisher creates a **full blog post page**, adds it to the home **Posts** index, and updates the registry (no draft approval).
+4. MeteoraDesk replies with token, one-line thesis, and Notion **post** URL for each new entry.
 
 If there are no new mints: **No new tokens.**
 
